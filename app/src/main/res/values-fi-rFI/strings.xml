@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GBTranslate</string>
+    <string name="translate">Käännä</string>
+    <string name="conversation">Keskustelu</string>
+    <string name="tap_on_the_voice_button_to_start">Napauta äänipainiketta aloittaaksesi</string>
+    <string name="history">Historia</string>
+    <string name="you_have_no_conversations_yet">Sinulla ei ole vielä keskusteluja.</string>
+    <string name="voice">Ääni</string>
+    <string name="listening">Kuunnellaan...</string>
+    <string name="cancel">Peruuta</string>
+    <string name="enter_text_to_translate">Syötä käännettävä teksti...</string>
+    <string name="offline_mode">Offline-tila</string>
+    <string name="camera_image"><![CDATA[Kamera ja kuva]]></string>
+    <string name="study">Opiskelu</string>
+    <string name="language">Kieli</string>
+    <string name="setting">Asetukset</string>
+    <string name="dark_mode">Tumma tila</string>
+    <string name="send_feedback">Lähetä palautetta</string>
+    <string name="privacy_policy">Tietosuojakäytäntö</string>
+    <string name="about_app">Tietoja sovelluksesta</string>
+    <string name="share_app">Jaa sovellus</string>
+    <string name="rate_us">Arvostele sovellus</string>
+    <string name="enter_name">Syötä nimi</string>
+    <string name="start_study">Aloita opiskelu</string>
+    <string name="search">Hae</string>
+    <string name="flashcards">Muistikortit</string>
+    <string name="complete">Valmis!</string>
+    <string name="unknown">Tuntemattomat: %1$d</string>
+    <string name="known">Tunnetut: %1$d</string>
+    <string name="your_list">Oma lista</string>
+    <string name="new_list">Uusi lista</string>
+    <string name="collections">Kokoelmat</string>
+    <string name="phrases">%1$d fraasia</string>
+    <string name="add_words">Lisää sanoja</string>
+    <string name="edit_words">Muokkaa sanoja</string>
+    <string name="title">Otsikko</string>
+    <string name="vocabulary">Sanasto</string>
+    <string name="save_vocabulary">Tallenna sanasto</string>
+    <string name="vocabulary_front">Sanasto (Etu)</string>
+    <string name="enter_text_here">Syötä teksti tähän</string>
+    <string name="define_back">Määritelmä (Taka)</string>
+    <string name="translate_history">Käännöshistoria</string>
+    <string name="delete">Poista</string>
+    <string name="are_you_sure_you_want_to_delete_translate_history">Haluatko varmasti poistaa käännöshistorian?</string>
+    <string name="voice_access">Äänikäyttö</string>
+    <string name="please_allow_recording_mode_to_operate">Salli tallennustila, jotta se toimii.</string>
+    <string name="turn_on">Ota käyttöön</string>
+    <string name="maybe_later">Ehkä myöhemmin</string>
+    <string name="camera_access">Kameran käyttöoikeus</string>
+    <string name="do_you_want_to_translate_text_by_taking_a_photo">Haluatko kääntää tekstiä ottamalla valokuvan?</string>
+    <string name="title_activity_splash">Aloitusnäyttö</string>
+    <string name="translation_modes">Käännöstilat</string>
+    <string name="new_conversation">Uusi keskustelu</string>
+    <string name="are_you_sure_you_want_to_start_a_new_conversation">
+    Haluatko varmasti aloittaa uuden keskustelun?
+</string>
+    <string name="download_language_model">Lataa kielimalli</string>
+    <string name="do_you_want_to_download_the">
+    Haluatko ladata %1$s?
+</string>
+    <string name="download">Lataa</string>
+    <string name="download_success">Lataus onnistui</string>
+    <string name="delete_language_model">Poista kielimalli</string>
+    <string name="do_you_want_to_delete_the">
+    Haluatko poistaa %1$s?
+</string>
+    <string name="select_language">Valitse kieli</string>
+    <string name="search_language">Hae kieltä…</string>
+    <string name="recent_languages">Viimeksi käytetyt kielet</string>
+    <string name="all_languages">Kaikki kielet</string>
+    <string name="skip">Ohita</string>
+    <string name="translate_all_languages">Käännä kaikki kielet</string>
+    <string name="translate_text_quickly_and_accurately_across_hundreds_of_languages">
+    Käännä teksti nopeasti ja tarkasti sadoille kielille.
+</string>
+    <string name="image_translation">Kuvakäännös</string>
+    <string name="understand_conversations_and_texts_instantly_just_speak_or_scan_to_translate">
+    Ymmärrä keskustelut ja tekstit heti. Puhu tai skannaa kääntääksesi.
+</string>
+    <string name="translate_the_conversation">Käännä keskustelu</string>
+    <string name="break_language_barriers_communicate_with_confidence_anytime_anywhere">
+    Riko kielimuurit. Viesti itsevarmasti milloin ja missä tahansa.
+</string>
+    <string name="boost_vocabulary_with_flashcards">Laajenna sanavarastoasi muistikorteilla</string>
+    <string name="flashcards_help_you_remember_new_words_longer_with_images_and_examples">
+    Muistikortit auttavat muistamaan uudet sanat pidempään kuvien ja esimerkkien avulla.
+</string>
+    <string name="no_text_detected">No text detected</string>
+    <string name="use_two_fingers_to_zoom_and_move_the_image">Use two fingers to zoom and move the image</string>
+    <string name="drag_your_finger_to_select_an_area">Drag your finger to select an area</string>
+    <string name="clip">Clip</string>
+    <string name="zoom">Zoom</string>
+</resources>

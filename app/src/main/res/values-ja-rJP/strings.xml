@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GBTranslate</string>
+    <string name="translate">翻訳</string>
+    <string name="conversation">会話</string>
+    <string name="tap_on_the_voice_button_to_start">音声ボタンをタップして開始してください</string>
+    <string name="history">履歴</string>
+    <string name="you_have_no_conversations_yet">まだ会話がありません。</string>
+    <string name="voice">音声</string>
+    <string name="listening">聞いています...</string>
+    <string name="cancel">キャンセル</string>
+    <string name="enter_text_to_translate">翻訳するテキストを入力してください...</string>
+    <string name="offline_mode">オフラインモード</string>
+    <string name="camera_image"><![CDATA[カメラと画像]]></string>
+    <string name="study">学習</string>
+    <string name="language">言語</string>
+    <string name="setting">設定</string>
+    <string name="dark_mode">ダークモード</string>
+    <string name="send_feedback">フィードバックを送信</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="about_app">アプリについて</string>
+    <string name="share_app">アプリを共有</string>
+    <string name="rate_us">評価する</string>
+    <string name="enter_name">名前を入力</string>
+    <string name="start_study">学習を開始</string>
+    <string name="search">検索</string>
+    <string name="flashcards">フラッシュカード</string>
+    <string name="complete">完了！</string>
+    <string name="unknown">不明: %1$d</string>
+    <string name="known">既知: %1$d</string>
+    <string name="your_list">あなたのリスト</string>
+    <string name="new_list">新しいリスト</string>
+    <string name="collections">コレクション</string>
+    <string name="phrases">%1$d フレーズ</string>
+    <string name="add_words">単語を追加</string>
+    <string name="edit_words">単語を編集</string>
+    <string name="title">タイトル</string>
+    <string name="vocabulary">語彙</string>
+    <string name="save_vocabulary">語彙を保存</string>
+    <string name="vocabulary_front">語彙（表）</string>
+    <string name="enter_text_here">ここにテキストを入力</string>
+    <string name="define_back">定義（裏）</string>
+    <string name="translate_history">翻訳履歴</string>
+    <string name="delete">削除</string>
+    <string name="are_you_sure_you_want_to_delete_translate_history">翻訳履歴を削除してもよろしいですか？</string>
+    <string name="voice_access">音声アクセス</string>
+    <string name="please_allow_recording_mode_to_operate">録音モードを許可してください。</string>
+    <string name="turn_on">オンにする</string>
+    <string name="maybe_later">後で</string>
+    <string name="camera_access">カメラへのアクセス</string>
+    <string name="do_you_want_to_translate_text_by_taking_a_photo">写真を撮ってテキストを翻訳しますか？</string>
+    <string name="title_activity_splash">スプラッシュ画面</string>
+    <string name="translation_modes">翻訳モード</string>
+    <string name="new_conversation">新しい会話</string>
+    <string name="are_you_sure_you_want_to_start_a_new_conversation">
+    本当に新しい会話を開始しますか？
+</string>
+    <string name="download_language_model">言語モデルをダウンロード</string>
+    <string name="do_you_want_to_download_the">
+    %1$s をダウンロードしますか？
+</string>
+    <string name="download">ダウンロード</string>
+    <string name="download_success">ダウンロード成功</string>
+    <string name="delete_language_model">言語モデルを削除</string>
+    <string name="do_you_want_to_delete_the">
+    %1$s を削除しますか？
+</string>
+    <string name="select_language">言語を選択</string>
+    <string name="search_language">言語を検索…</string>
+    <string name="recent_languages">最近使った言語</string>
+    <string name="all_languages">すべての言語</string>
+    <string name="skip">スキップ</string>
+    <string name="translate_all_languages">すべての言語を翻訳</string>
+    <string name="translate_text_quickly_and_accurately_across_hundreds_of_languages">
+    何百もの言語に対して、テキストを素早く正確に翻訳します。
+</string>
+    <string name="image_translation">画像翻訳</string>
+    <string name="understand_conversations_and_texts_instantly_just_speak_or_scan_to_translate">
+    会話やテキストを瞬時に理解。話すかスキャンするだけで翻訳できます。
+</string>
+    <string name="translate_the_conversation">会話を翻訳</string>
+    <string name="break_language_barriers_communicate_with_confidence_anytime_anywhere">
+    言語の壁を超え、いつでもどこでも自信を持ってコミュニケーションできます。
+</string>
+    <string name="boost_vocabulary_with_flashcards">フラッシュカードで語彙を増やす</string>
+    <string name="flashcards_help_you_remember_new_words_longer_with_images_and_examples">
+    フラッシュカードは、画像や例とともに新しい単語を長く覚えるのに役立ちます。
+</string>
+    <string name="no_text_detected">No text detected</string>
+    <string name="use_two_fingers_to_zoom_and_move_the_image">Use two fingers to zoom and move the image</string>
+    <string name="drag_your_finger_to_select_an_area">Drag your finger to select an area</string>
+    <string name="clip">Clip</string>
+    <string name="zoom">Zoom</string>
+
+</resources>

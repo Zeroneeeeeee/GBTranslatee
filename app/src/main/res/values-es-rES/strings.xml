@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GBTranslate</string>
+    <string name="translate">Traducir</string>
+    <string name="conversation">Conversación</string>
+    <string name="tap_on_the_voice_button_to_start">Toca el botón de voz para comenzar</string>
+    <string name="history">Historial</string>
+    <string name="you_have_no_conversations_yet">Aún no tienes conversaciones.</string>
+    <string name="voice">Voz</string>
+    <string name="listening">Escuchando...</string>
+    <string name="cancel">Cancelar</string>
+    <string name="enter_text_to_translate">Introduce el texto para traducir...</string>
+    <string name="offline_mode">Modo sin conexión</string>
+    <string name="camera_image"><![CDATA[Cámara e imagen]]></string>
+    <string name="study">Estudio</string>
+    <string name="language">Idioma</string>
+    <string name="setting">Configuración</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="send_feedback">Enviar comentarios</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="about_app">Acerca de la aplicación</string>
+    <string name="share_app">Compartir aplicación</string>
+    <string name="rate_us">Califícanos</string>
+    <string name="enter_name">Introduce el nombre</string>
+    <string name="start_study">Comenzar estudio</string>
+    <string name="search">Buscar</string>
+    <string name="flashcards">Tarjetas didácticas</string>
+    <string name="complete">¡Completado!</string>
+    <string name="unknown">Desconocidas: %1$d</string>
+    <string name="known">Conocidas: %1$d</string>
+    <string name="your_list">Tu lista</string>
+    <string name="new_list">Nueva lista</string>
+    <string name="collections">Colecciones</string>
+    <string name="phrases">%1$d frases</string>
+    <string name="add_words">Agregar palabras</string>
+    <string name="edit_words">Editar palabras</string>
+    <string name="title">Título</string>
+    <string name="vocabulary">Vocabulario</string>
+    <string name="save_vocabulary">Guardar vocabulario</string>
+    <string name="vocabulary_front">Vocabulario (Anverso)</string>
+    <string name="enter_text_here">Introduce el texto aquí</string>
+    <string name="define_back">Definición (Reverso)</string>
+    <string name="translate_history">Historial de traducciones</string>
+    <string name="delete">Eliminar</string>
+    <string name="are_you_sure_you_want_to_delete_translate_history">¿Seguro que deseas eliminar el historial de traducciones?</string>
+    <string name="voice_access">Acceso a la voz</string>
+    <string name="please_allow_recording_mode_to_operate">Por favor, permite el modo de grabación para que funcione.</string>
+    <string name="turn_on">Activar</string>
+    <string name="maybe_later">Quizás más tarde</string>
+    <string name="camera_access">Acceso a la cámara</string>
+    <string name="do_you_want_to_translate_text_by_taking_a_photo">¿Quieres traducir texto tomando una foto?</string>
+    <string name="title_activity_splash">Pantalla de inicio</string>
+    <string name="translation_modes">Modos de traducción</string>
+    <string name="new_conversation">Nueva conversación</string>
+    <string name="are_you_sure_you_want_to_start_a_new_conversation">
+    ¿Está seguro de que desea iniciar una nueva conversación?
+</string>
+    <string name="download_language_model">Descargar modelo de idioma</string>
+    <string name="do_you_want_to_download_the">
+    ¿Desea descargar %1$s?
+</string>
+    <string name="download">Descargar</string>
+    <string name="download_success">Descarga completada</string>
+    <string name="delete_language_model">Eliminar modelo de idioma</string>
+    <string name="do_you_want_to_delete_the">
+    ¿Desea eliminar %1$s?
+</string>
+    <string name="select_language">Seleccionar idioma</string>
+    <string name="search_language">Buscar idioma…</string>
+    <string name="recent_languages">Idiomas recientes</string>
+    <string name="all_languages">Todos los idiomas</string>
+    <string name="skip">Omitir</string>
+    <string name="translate_all_languages">Traducir todos los idiomas</string>
+    <string name="translate_text_quickly_and_accurately_across_hundreds_of_languages">
+    Traduce texto de forma rápida y precisa en cientos de idiomas.
+</string>
+    <string name="image_translation">Traducción de imágenes</string>
+    <string name="understand_conversations_and_texts_instantly_just_speak_or_scan_to_translate">
+    Comprende conversaciones y textos al instante. Solo habla o escanea para traducir.
+</string>
+    <string name="translate_the_conversation">Traducir la conversación</string>
+    <string name="break_language_barriers_communicate_with_confidence_anytime_anywhere">
+    Rompe las barreras del idioma. Comunícate con confianza en cualquier momento y lugar.
+</string>
+    <string name="boost_vocabulary_with_flashcards">Amplía tu vocabulario con tarjetas didácticas</string>
+    <string name="flashcards_help_you_remember_new_words_longer_with_images_and_examples">
+    Las tarjetas didácticas te ayudan a recordar palabras nuevas por más tiempo con imágenes y ejemplos.
+</string>
+    <string name="no_text_detected">No text detected</string>
+    <string name="use_two_fingers_to_zoom_and_move_the_image">Use two fingers to zoom and move the image</string>
+    <string name="drag_your_finger_to_select_an_area">Drag your finger to select an area</string>
+    <string name="clip">Clip</string>
+    <string name="zoom">Zoom</string>
+
+</resources>
