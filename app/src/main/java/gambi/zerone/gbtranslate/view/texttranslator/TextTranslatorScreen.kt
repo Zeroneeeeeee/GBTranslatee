@@ -25,9 +25,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import com.example.gbtranslate.R
-import gambi.zerone.gbtranslate.CameraAccessDialog
+import gambi.zerone.gbtranslate.view.component.CameraAccessDialog
 import gambi.zerone.gbtranslate.utils.LanguageType
-import gambi.zerone.gbtranslate.VoiceAccessDialog
+import gambi.zerone.gbtranslate.view.component.VoiceAccessDialog
 import gambi.zerone.gbtranslate.view.conversation.Header
 import gambi.zerone.gbtranslate.view.home.SpeechDialog
 import gambi.zerone.gbtranslate.view.texttranslator.component.Translator

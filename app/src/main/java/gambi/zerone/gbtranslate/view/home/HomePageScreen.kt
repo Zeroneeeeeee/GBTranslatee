@@ -54,8 +54,8 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import com.example.gbtranslate.R
 import com.google.mlkit.nl.translate.TranslateLanguage
-import gambi.zerone.gbtranslate.CameraAccessDialog
-import gambi.zerone.gbtranslate.VoiceAccessDialog
+import gambi.zerone.gbtranslate.view.component.CameraAccessDialog
+import gambi.zerone.gbtranslate.view.component.VoiceAccessDialog
 import gambi.zerone.gbtranslate.utils.LanguageType
 import gambi.zerone.gbtranslate.utils.VoiceToTextParser
 import gambi.zerone.gbtranslate.view.home.component.MainHeader

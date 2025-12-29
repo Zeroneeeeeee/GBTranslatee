@@ -44,7 +44,7 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import com.example.gbtranslate.R
 import gambi.zerone.gbtranslate.utils.LanguageType
-import gambi.zerone.gbtranslate.VoiceAccessDialog
+import gambi.zerone.gbtranslate.view.component.VoiceAccessDialog
 import gambi.zerone.gbtranslate.utils.toLanguageDisplayName
 import gambi.zerone.gbtranslate.view.home.SpeechDialog
 import java.util.Locale

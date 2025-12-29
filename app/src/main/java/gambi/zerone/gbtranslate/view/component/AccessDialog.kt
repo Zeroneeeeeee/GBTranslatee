@@ -1,4 +1,4 @@
-package gambi.zerone.gbtranslate
+package gambi.zerone.gbtranslate.view.component
 
 import android.Manifest
 import android.content.Context
@@ -10,7 +10,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.window.Dialog
 import androidx.core.content.ContextCompat
 import com.example.gbtranslate.R
 import gambi.zerone.gbtranslate.view.home.openAppSettings

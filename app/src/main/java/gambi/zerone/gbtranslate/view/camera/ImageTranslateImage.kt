@@ -61,7 +61,6 @@ import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.IntOffset
@@ -70,7 +69,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.gbtranslate.R
 import com.google.mlkit.nl.translate.TranslateLanguage
-import gambi.zerone.gbtranslate.LoadingScreen
+import gambi.zerone.gbtranslate.view.component.LoadingScreen
 import gambi.zerone.gbtranslate.utils.LanguageType
 import gambi.zerone.gbtranslate.utils.textToSpeech
 import gambi.zerone.gbtranslate.utils.toLanguageDisplayName

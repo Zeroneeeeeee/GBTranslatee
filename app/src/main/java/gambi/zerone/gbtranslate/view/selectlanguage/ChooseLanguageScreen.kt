@@ -45,8 +45,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.gbtranslate.R
-import gambi.zerone.gbtranslate.CupertinoAlertDialog
-import gambi.zerone.gbtranslate.LoadingScreen
+import gambi.zerone.gbtranslate.view.component.CupertinoAlertDialog
+import gambi.zerone.gbtranslate.view.component.LoadingScreen
 import gambi.zerone.gbtranslate.utils.LanguagesUtils
 import gambi.zerone.gbtranslate.utils.RecentLanguagePrefs
 import gambi.zerone.gbtranslate.utils.toLanguageDisplayName

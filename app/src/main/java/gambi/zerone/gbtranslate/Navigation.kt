@@ -7,7 +7,6 @@ import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -29,6 +28,7 @@ import gambi.zerone.gbtranslate.view.camera.ImageTranslateScreen
 import gambi.zerone.gbtranslate.view.conversation.ConversationHistoryScreen
 import gambi.zerone.gbtranslate.view.conversation.ConversationScreen
 import gambi.zerone.gbtranslate.view.home.HomeScreen
+import gambi.zerone.gbtranslate.view.onboarding.OnBoardingScreen
 import gambi.zerone.gbtranslate.view.selectlanguage.ChooseLanguageScreen
 import gambi.zerone.gbtranslate.view.setting.LanguageScreen
 import gambi.zerone.gbtranslate.view.setting.SettingScreen
@@ -40,7 +40,6 @@ import gambi.zerone.gbtranslate.view.study.UpsertFlashcardScreen
 import gambi.zerone.gbtranslate.view.study.listLessons
 import gambi.zerone.gbtranslate.view.texttranslator.TextTranslatorScreen
 import gambi.zerone.gbtranslate.view.translatehistory.TranslateHistoryScreen
-import kotlinx.coroutines.delay
 
 @Composable
 fun Navigation(
