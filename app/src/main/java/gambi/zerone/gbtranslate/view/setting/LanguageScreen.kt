@@ -72,7 +72,7 @@ fun LanguageScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
+
     ) {
         Header(
             title = localizedContext.resources.getString(R.string.language),

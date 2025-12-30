@@ -70,7 +70,6 @@ private fun Content(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
     ) {
         Header(title = localizedContext.resources.getString(R.string.setting), onBack = onBack)
         ListSettingItem(
