@@ -60,7 +60,7 @@ fun SplashScreen(
         Image(
             painter = painterResource(id = R.drawable.ic_splash),
             contentDescription = "App Logo",
-            modifier = Modifier.size(120.dp)
+            modifier = Modifier.size(170.dp)
         )
     }
 }
