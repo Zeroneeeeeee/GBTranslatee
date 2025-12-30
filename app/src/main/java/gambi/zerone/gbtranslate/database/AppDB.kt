@@ -12,7 +12,7 @@ import gambi.zerone.gbtranslate.entity.Lesson
 import gambi.zerone.gbtranslate.entity.TranslateHistory
 
 @Database(entities = [Lesson::class, FlashCard::class, TranslateHistory::class], version = 1)
-abstract class AppDB: RoomDatabase() {
+abstract class AppDB : RoomDatabase() {
     abstract fun flashCardDao(): FlashCardDao
     abstract fun lessonDao(): LessonDao
     abstract fun translateHistoryDao(): TranslateHistoryDao

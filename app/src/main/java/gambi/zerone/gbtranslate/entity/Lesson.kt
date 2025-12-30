@@ -5,6 +5,6 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "lesson")
 data class Lesson(
-    @PrimaryKey val id:Long = System.currentTimeMillis(),
-    val title:String,
+    @PrimaryKey val id: Long = System.currentTimeMillis(),
+    val title: String,
 )

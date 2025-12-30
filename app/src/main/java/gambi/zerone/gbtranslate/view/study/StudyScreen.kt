@@ -114,7 +114,7 @@ fun Lists(
     ) {
         OutlinedTextField(
             value = search,
-            onValueChange = {search = it},
+            onValueChange = { search = it },
             shape = RoundedCornerShape(16.dp),
             placeholder = { Text(localizedContext.resources.getString(R.string.search)) },
             modifier = Modifier

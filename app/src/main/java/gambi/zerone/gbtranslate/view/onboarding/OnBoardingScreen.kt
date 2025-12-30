@@ -41,7 +41,11 @@ import androidx.compose.ui.unit.sp
 import com.example.gbtranslate.R
 
 @Composable
-fun OnBoardingScreen(modifier: Modifier = Modifier, localizeContext: Context, toHome: () -> Unit = {}) {
+fun OnBoardingScreen(
+    modifier: Modifier = Modifier,
+    localizeContext: Context,
+    toHome: () -> Unit = {}
+) {
     var position by remember { mutableStateOf(0) }
     val pages = listOf(
         OnBoardingPage(

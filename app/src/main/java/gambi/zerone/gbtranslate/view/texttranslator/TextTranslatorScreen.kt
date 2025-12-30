@@ -25,8 +25,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import com.example.gbtranslate.R
-import gambi.zerone.gbtranslate.view.component.CameraAccessDialog
 import gambi.zerone.gbtranslate.utils.LanguageType
+import gambi.zerone.gbtranslate.view.component.CameraAccessDialog
 import gambi.zerone.gbtranslate.view.component.VoiceAccessDialog
 import gambi.zerone.gbtranslate.view.conversation.Header
 import gambi.zerone.gbtranslate.view.home.SpeechDialog
@@ -99,7 +99,7 @@ fun TextTranslatorScreen(
         modifier = modifier,
         localizedContext = localizedContext,
         input = inputText,
-        output =output,
+        output = output,
         inputLanguage = inputLanguage,
         outputLanguage = outputLanguage,
         toChoosingLanguage = toChoosingLanguage,
@@ -178,20 +178,16 @@ private fun Content(
             title = localizedContext.resources.getString(R.string.translate),
             onBack = onBack,
             trailing = {
-            Icon(
-                painter = painterResource(R.drawable.ic_history),
-                contentDescription = "History Icon",
-                tint = MaterialTheme.colorScheme.onBackground,
-                modifier = Modifier.size(32.dp).clickable{toHistoryScreen()},
-            )
-//            Spacer(modifier = Modifier.width(16.dp))
-//            Icon(
-//                painter = painterResource(R.drawable.ic_bookmark),
-//                contentDescription = "History Icon",
-//                tint = Color.Unspecified,
-//                modifier = Modifier.size(32.dp),
-//            )
-        })
+                Icon(
+                    painter = painterResource(R.drawable.ic_history),
+                    contentDescription = "History Icon",
+                    tint = MaterialTheme.colorScheme.onBackground,
+                    modifier = Modifier
+                        .size(32.dp)
+                        .clickable { toHistoryScreen() },
+                )
+            }
+        )
         Translator(
             localizedContext = localizedContext,
             inputLanguage = inputLanguage,

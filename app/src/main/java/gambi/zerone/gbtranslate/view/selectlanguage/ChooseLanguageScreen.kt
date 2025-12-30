@@ -45,11 +45,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.gbtranslate.R
-import gambi.zerone.gbtranslate.view.component.CupertinoAlertDialog
-import gambi.zerone.gbtranslate.view.component.LoadingScreen
 import gambi.zerone.gbtranslate.utils.LanguagesUtils
 import gambi.zerone.gbtranslate.utils.RecentLanguagePrefs
 import gambi.zerone.gbtranslate.utils.toLanguageDisplayName
+import gambi.zerone.gbtranslate.view.component.CupertinoAlertDialog
+import gambi.zerone.gbtranslate.view.component.LoadingScreen
 import gambi.zerone.gbtranslate.view.conversation.Header
 import java.util.Locale
 
@@ -64,7 +64,7 @@ fun ChooseLanguageScreen(
     var isLoading by remember { mutableStateOf(false) }
     var showDownloadDialog by remember { mutableStateOf(false) }
     var showDeleteDialog by remember { mutableStateOf(false) }
-    var languageCode by remember { mutableStateOf("")}
+    var languageCode by remember { mutableStateOf("") }
 
     val context = LocalContext.current
 
@@ -119,6 +119,10 @@ fun ChooseLanguageScreen(
                         ).show()
                     }
                 )
+                showDownloadDialog = false
+            },
+            onCancel = {
+                showDownloadDialog = false
             }
         )
     }
@@ -133,6 +137,10 @@ fun ChooseLanguageScreen(
             cancelText = localizedContext.resources.getString(R.string.cancel),
             onConfirm = {
                 viewModel.deleteLanguage(languageCode)
+                showDownloadDialog = false
+            },
+            onCancel = {
+                showDeleteDialog = false
             }
         )
     }
@@ -154,7 +162,10 @@ private fun Content(
             .fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Header(title = localizeContext.resources.getString(R.string.select_language), onBack = onBack) {
+        Header(
+            title = localizeContext.resources.getString(R.string.select_language),
+            onBack = onBack
+        ) {
 
         }
         SearchBar(
@@ -175,7 +186,11 @@ private fun Content(
 }
 
 @Composable
-fun SearchBar(modifier: Modifier = Modifier,localizeContext: Context, getSearchResult: (String) -> Unit = {}) {
+fun SearchBar(
+    modifier: Modifier = Modifier,
+    localizeContext: Context,
+    getSearchResult: (String) -> Unit = {}
+) {
     var search by remember { mutableStateOf("") }
     Box(modifier = modifier.fillMaxWidth()) {
         OutlinedTextField(
@@ -204,7 +219,10 @@ fun LanguageList(
     val context = LocalContext.current
     LazyColumn(modifier = modifier.fillMaxWidth()) {
         item {
-            Text(text = localizeContext.resources.getString(R.string.recent_languages), color = MaterialTheme.colorScheme.onBackground)
+            Text(
+                text = localizeContext.resources.getString(R.string.recent_languages),
+                color = MaterialTheme.colorScheme.onBackground
+            )
             Spacer(modifier = Modifier.height(8.dp))
             Column(
                 modifier = Modifier
@@ -239,7 +257,10 @@ fun LanguageList(
                     }
             }
             Spacer(modifier = Modifier.height(16.dp))
-            Text(text = localizeContext.resources.getString(R.string.all_languages), color = MaterialTheme.colorScheme.onBackground)
+            Text(
+                text = localizeContext.resources.getString(R.string.all_languages),
+                color = MaterialTheme.colorScheme.onBackground
+            )
             Spacer(modifier = Modifier.height(8.dp))
             Column(
                 modifier = Modifier

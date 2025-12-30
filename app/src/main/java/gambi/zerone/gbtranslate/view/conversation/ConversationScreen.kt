@@ -1,5 +1,6 @@
 package gambi.zerone.gbtranslate.view.conversation
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
 import androidx.compose.foundation.clickable
@@ -19,8 +20,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.gbtranslate.R
-import gambi.zerone.gbtranslate.view.component.CupertinoAlertDialog
 import gambi.zerone.gbtranslate.utils.LanguageType
+import gambi.zerone.gbtranslate.view.component.CupertinoAlertDialog
 
 @Composable
 fun ConversationScreen(
@@ -59,7 +60,7 @@ fun Content(
     onExchange: () -> Unit
 ) {
     var showWarningDialog by remember { mutableStateOf(false) }
-    Column() {
+    Column {
         Header(
             title = localizedContext.resources.getString(R.string.conversation),
             onBack = onBack,

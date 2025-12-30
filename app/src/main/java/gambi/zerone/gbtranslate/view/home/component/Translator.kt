@@ -1,7 +1,6 @@
 package gambi.zerone.gbtranslate.view.home.component
 
 import android.content.Context
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
@@ -38,13 +37,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.gbtranslate.R
-import gambi.zerone.gbtranslate.entity.TranslateHistory
 import gambi.zerone.gbtranslate.utils.LanguageType
-import gambi.zerone.gbtranslate.utils.LanguagesUtils
-import gambi.zerone.gbtranslate.utils.SharedPreference
 import gambi.zerone.gbtranslate.utils.toLanguageDisplayName
 import gambi.zerone.gbtranslate.view.home.HomeViewModel
-import java.util.Locale
 
 @Composable
 fun Translator(
@@ -130,7 +125,7 @@ fun LanguagePicker(
     language: String = "English",
     onClick: () -> Unit = {}
 ) {
-    val context = LocalContext.current
+    LocalContext.current
     Row(
         modifier = modifier
             .background(MaterialTheme.colorScheme.secondaryContainer, RoundedCornerShape(20.dp))
@@ -179,7 +174,7 @@ fun TranslateTextField(
     onVoiceToText: () -> Unit,
     toCameraScreen: () -> Unit,
 
-) {
+    ) {
     var text by remember { mutableStateOf(inputText) }
     LaunchedEffect(inputText) {
         text = inputText

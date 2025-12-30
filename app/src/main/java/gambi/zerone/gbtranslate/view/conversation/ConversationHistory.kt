@@ -38,10 +38,15 @@ import com.google.mlkit.nl.translate.TranslateLanguage
 import gambi.zerone.gbtranslate.utils.LanguagesUtils
 
 @Composable
-fun ConversationHistoryScreen(modifier: Modifier = Modifier, localizedContext: Context, onBack: () -> Unit){
-    Column(modifier = modifier
-        .fillMaxSize()
-    ){
+fun ConversationHistoryScreen(
+    modifier: Modifier = Modifier,
+    localizedContext: Context,
+    onBack: () -> Unit
+) {
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+    ) {
         Header(
             title = localizedContext.resources.getString(R.string.history),
             onBack = onBack
@@ -127,7 +132,7 @@ fun HistoryConversationChat(
     LaunchedEffect(text) {
 
         if (text.isNotEmpty()) {
-            if(sender == 1){
+            if (sender == 1) {
 
                 LanguagesUtils.translationInit(
                     text = text,
@@ -135,8 +140,7 @@ fun HistoryConversationChat(
                     outputLanguage = outputLanguage,
                     onSuccess = { translatedText = this }
                 )
-            }
-            else{
+            } else {
                 LanguagesUtils.translationInit(
                     text = text,
                     inputLanguage = outputLanguage,

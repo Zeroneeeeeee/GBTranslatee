@@ -3,10 +3,7 @@ package gambi.zerone.gbtranslate.view.selectlanguage
 import android.app.Application
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.AndroidViewModel
-import com.google.mlkit.nl.translate.Translator
 import gambi.zerone.gbtranslate.utils.LanguagesUtils
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
 
 class SelectLanguageViewModel(application: Application) : AndroidViewModel(application) {
     // LanguageCode -> DownloadState
@@ -63,6 +60,7 @@ class SelectLanguageViewModel(application: Application) : AndroidViewModel(appli
         )
     }
 }
+
 enum class DownloadState {
     NotDownloaded,
     Downloading,

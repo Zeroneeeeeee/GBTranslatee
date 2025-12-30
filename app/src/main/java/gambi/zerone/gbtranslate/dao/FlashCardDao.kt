@@ -10,8 +10,10 @@ import gambi.zerone.gbtranslate.entity.FlashCard
 interface FlashCardDao {
     @Query("SELECT * FROM flashcard WHERE lessonId = :lessonId")
     suspend fun getAllFlashCards(lessonId: Long): List<FlashCard>
+
     @Upsert
     suspend fun upsertFlashCard(flashCard: FlashCard)
+
     @Delete
     suspend fun deleteFlashCard(flashCard: FlashCard)
 }

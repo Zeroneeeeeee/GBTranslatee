@@ -8,8 +8,6 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.provider.Settings
 import android.util.Log
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -54,10 +52,10 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import com.example.gbtranslate.R
 import com.google.mlkit.nl.translate.TranslateLanguage
-import gambi.zerone.gbtranslate.view.component.CameraAccessDialog
-import gambi.zerone.gbtranslate.view.component.VoiceAccessDialog
 import gambi.zerone.gbtranslate.utils.LanguageType
 import gambi.zerone.gbtranslate.utils.VoiceToTextParser
+import gambi.zerone.gbtranslate.view.component.CameraAccessDialog
+import gambi.zerone.gbtranslate.view.component.VoiceAccessDialog
 import gambi.zerone.gbtranslate.view.home.component.MainHeader
 import gambi.zerone.gbtranslate.view.home.component.TranslateModes
 import gambi.zerone.gbtranslate.view.home.component.Translator
@@ -66,7 +64,7 @@ import gambi.zerone.gbtranslate.view.home.component.Translator
 fun HomeScreen(
     modifier: Modifier = Modifier,
     toLanguageScreen: (LanguageType) -> Unit = {},
-    toTextTranslate: (String,String) -> Unit,
+    toTextTranslate: (String, String) -> Unit,
     inputLanguage: String,
     outputLanguage: String,
     application: Application,
@@ -91,6 +89,10 @@ fun HomeScreen(
 
     val micPermission = Manifest.permission.RECORD_AUDIO
     val cameraPermission = Manifest.permission.CAMERA
+
+    LaunchedEffect(Unit) {
+        Log.d("CheckLaunch", "CheckLaunch: ")
+    }
 
     /* ================= HANDLERS ================= */
 
@@ -261,22 +263,7 @@ fun SpeechDialog(
         mutableStateOf(false)
     }
 
-    var canRecord by remember {
-        mutableStateOf(false)
-    }
-
-    val recordAudioLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.RequestPermission(),
-        onResult = { isGranted ->
-            canRecord = isGranted
-        }
-    )
-
     val state by voiceToTextParser.state.collectAsState()
-
-    LaunchedEffect(recordAudioLauncher) {
-        recordAudioLauncher.launch(Manifest.permission.RECORD_AUDIO)
-    }
 
     LaunchedEffect(state.spokenText) {
         if (state.spokenText.isNotEmpty() && isRecording) {
@@ -369,15 +356,6 @@ fun SpeechDialog(
             }
         }
     }
-}
-
-fun openAppSettings(context: Context) {
-    val intent = Intent(
-        Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-        Uri.fromParts("package", context.packageName, null)
-    )
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(intent)
 }
 
 @Preview(showBackground = true)

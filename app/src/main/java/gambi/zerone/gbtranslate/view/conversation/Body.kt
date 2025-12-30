@@ -1,6 +1,7 @@
 package gambi.zerone.gbtranslate.view.conversation
 
 import android.Manifest
+import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.content.pm.PackageManager
@@ -44,8 +45,8 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import com.example.gbtranslate.R
 import gambi.zerone.gbtranslate.utils.LanguageType
-import gambi.zerone.gbtranslate.view.component.VoiceAccessDialog
 import gambi.zerone.gbtranslate.utils.toLanguageDisplayName
+import gambi.zerone.gbtranslate.view.component.VoiceAccessDialog
 import gambi.zerone.gbtranslate.view.home.SpeechDialog
 import java.util.Locale
 
@@ -83,7 +84,7 @@ fun Body(
         }
     }
 
-    Box() {
+    Box {
         Column(
             modifier = modifier
                 .fillMaxSize()
@@ -134,13 +135,19 @@ fun Body(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = secondLanguage.toLanguageDisplayName(Locale.forLanguageTag(secondLanguage)),
+                            text = secondLanguage.toLanguageDisplayName(
+                                Locale.forLanguageTag(
+                                    secondLanguage
+                                )
+                            ),
                             fontSize = 14.sp,
                             fontWeight = FontWeight.SemiBold,
                             textAlign = TextAlign.Center,
                             color = MaterialTheme.colorScheme.onBackground,
                             maxLines = 1,
-                            modifier = Modifier.padding(horizontal = 10.dp).basicMarquee(),
+                            modifier = Modifier
+                                .padding(horizontal = 10.dp)
+                                .basicMarquee(),
                         )
                     }
 
@@ -168,13 +175,19 @@ fun Body(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = firstLanguage.toLanguageDisplayName(Locale.forLanguageTag(firstLanguage)),
+                            text = firstLanguage.toLanguageDisplayName(
+                                Locale.forLanguageTag(
+                                    firstLanguage
+                                )
+                            ),
                             fontSize = 14.sp,
                             fontWeight = FontWeight.SemiBold,
                             textAlign = TextAlign.Center,
                             color = MaterialTheme.colorScheme.onBackground,
                             maxLines = 1,
-                            modifier = Modifier.padding(horizontal = 10.dp).basicMarquee()
+                            modifier = Modifier
+                                .padding(horizontal = 10.dp)
+                                .basicMarquee()
                         )
                     }
                 }
@@ -220,8 +233,8 @@ fun Body(
             SpeechDialog(
                 localizedContext = localizedContext,
                 application = application,
-                buttonColor = if(sender == 0) Color(0xFF3162FF) else Color(0xFFFF749F),
-                fadeColor = if(sender == 0) Color(0xFF7B97F7) else Color(0xFFFF9BA6),
+                buttonColor = if (sender == 0) Color(0xFF3162FF) else Color(0xFFFF749F),
+                fadeColor = if (sender == 0) Color(0xFF7B97F7) else Color(0xFFFF9BA6),
                 onTextReceived = {
                     message.add(Message(text = it, sender = sender))
                     Log.d("TAG", "ConversationBox: ${message}")
@@ -230,8 +243,8 @@ fun Body(
                 onDismiss = {
                     showSpeechDialog = false
                 },
-                modifier = Modifier.graphicsLayer{
-                    rotationZ = if(sender == 1) 0f else 180f
+                modifier = Modifier.graphicsLayer {
+                    rotationZ = if (sender == 1) 0f else 180f
                 }
             )
         }

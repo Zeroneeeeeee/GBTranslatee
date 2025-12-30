@@ -86,7 +86,7 @@ fun AddLessonDialog(
                 color = MaterialTheme.colorScheme.onBackground
             )
             Spacer(modifier = Modifier.height(16.dp))
-            Column() {
+            Column {
                 Text(
                     text = description,
                     fontSize = 16.sp,
@@ -131,9 +131,12 @@ fun AddLessonDialog(
                     onClick = {
                         if (name.isNotBlank()) {
                             onConfirm(name)
-                        }
-                        else{
-                            Toast.makeText(localizedContext, "Name cannot be blank", Toast.LENGTH_SHORT).show()
+                        } else {
+                            Toast.makeText(
+                                localizedContext,
+                                "Name cannot be blank",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     },
                     colors = ButtonDefaults.buttonColors(

@@ -291,8 +291,8 @@ private fun FlashCardItem(
                         text = if (flipRotation <= 90f) card.front else card.back
                     )
                 }
-                .align(if(flipRotation<=90) Alignment.TopStart else Alignment.TopEnd)
-                .graphicsLayer { rotationY = if(flipRotation<=90) 0f else 180f }
+                .align(if (flipRotation <= 90) Alignment.TopStart else Alignment.TopEnd)
+                .graphicsLayer { rotationY = if (flipRotation <= 90) 0f else 180f }
                 .padding(16.dp)
         )
 

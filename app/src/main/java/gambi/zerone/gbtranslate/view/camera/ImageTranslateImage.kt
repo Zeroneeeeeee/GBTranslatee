@@ -69,10 +69,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.gbtranslate.R
 import com.google.mlkit.nl.translate.TranslateLanguage
-import gambi.zerone.gbtranslate.view.component.LoadingScreen
 import gambi.zerone.gbtranslate.utils.LanguageType
 import gambi.zerone.gbtranslate.utils.textToSpeech
 import gambi.zerone.gbtranslate.utils.toLanguageDisplayName
+import gambi.zerone.gbtranslate.view.component.LoadingScreen
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlin.math.abs
 import kotlin.math.max
@@ -117,7 +117,7 @@ fun ImageTranslateScreen(
         endDragOffset = null
     }
 
-    Box() {
+    Box {
         val isLoading by IS_LOADING.collectAsState()
 
         LaunchedEffect(isLoading) {

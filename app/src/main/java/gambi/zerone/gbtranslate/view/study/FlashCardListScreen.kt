@@ -76,8 +76,9 @@ fun Content(
     toAddFlashCardScreen: (LessonVM, FlashCardVM) -> Unit,
     onBack: () -> Unit
 ) {
-    Box(modifier = modifier
-        .fillMaxSize()
+    Box(
+        modifier = modifier
+            .fillMaxSize()
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
             Header(title = lesson.title, onBack = onBack)

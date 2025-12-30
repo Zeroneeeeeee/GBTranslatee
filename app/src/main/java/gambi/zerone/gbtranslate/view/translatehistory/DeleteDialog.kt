@@ -16,7 +16,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -87,7 +86,12 @@ fun NotifyDialog(
                 )
             }
             Spacer(modifier = Modifier.height(16.dp))
-            Text(text = title, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, color = Color.Black)
+            Text(
+                text = title,
+                fontSize = 24.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = Color.Black
+            )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = description,

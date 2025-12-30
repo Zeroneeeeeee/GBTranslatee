@@ -146,7 +146,7 @@ fun Body(
                     Spacer(Modifier.width(16.dp))
                     Button(
                         onClick = {
-                            if(front.isNotBlank() && back.isNotBlank()){
+                            if (front.isNotBlank() && back.isNotBlank()) {
                                 isFrontValid = true
                                 isBackValid = true
                                 viewmodel.upsertFlashCard(
@@ -157,13 +157,16 @@ fun Body(
                                     ), lessonId = lessonId
                                 )
                                 onBack()
-                            }
-                            else{
-                                Toast.makeText(localizedContext, "Please fill in all fields", Toast.LENGTH_SHORT).show()
-                                if(front.isBlank()){
+                            } else {
+                                Toast.makeText(
+                                    localizedContext,
+                                    "Please fill in all fields",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                if (front.isBlank()) {
                                     isFrontValid = false
                                 }
-                                if(back.isBlank()){
+                                if (back.isBlank()) {
                                     isBackValid = false
                                 }
                             }

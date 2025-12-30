@@ -2,8 +2,6 @@ package gambi.zerone.gbtranslate.view.conversation
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import com.google.mlkit.nl.translate.Translator
-import gambi.zerone.gbtranslate.utils.LanguagesUtils
 
 class ConversationViewModel(application: Application) : AndroidViewModel(application) {
 //    private var translator: Translator? = null

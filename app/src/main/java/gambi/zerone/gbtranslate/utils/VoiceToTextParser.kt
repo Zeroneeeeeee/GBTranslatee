@@ -14,13 +14,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import java.util.Locale
-import kotlin.apply
-import kotlin.collections.getOrNull
-import kotlin.let
 
 class VoiceToTextParser(
     private val app: Application
-): RecognitionListener {
+) : RecognitionListener {
 
     private val _state = MutableStateFlow(VoiceToTextParserState())
     val state = _state.asStateFlow()
@@ -28,9 +25,9 @@ class VoiceToTextParser(
     val recognizer = SpeechRecognizer.createSpeechRecognizer(app)
 
     fun startListening(languageCode: String) {
-        _state.update {VoiceToTextParserState()}
+        _state.update { VoiceToTextParserState() }
 
-        if(!SpeechRecognizer.isRecognitionAvailable(app)){
+        if (!SpeechRecognizer.isRecognitionAvailable(app)) {
             _state.update {
                 it.copy(
                     error = "Recognition is not available"
@@ -64,7 +61,7 @@ class VoiceToTextParser(
 
     }
 
-    fun stopListening(){
+    fun stopListening() {
         _state.update {
             it.copy(
                 isSpeaking = false
@@ -74,7 +71,7 @@ class VoiceToTextParser(
         recognizer.stopListening()
     }
 
-    override fun onBeginningOfSpeech(){
+    override fun onBeginningOfSpeech() {
         Log.d("VoiceToText", "onBeginningOfSpeech")
     }
 
@@ -90,7 +87,7 @@ class VoiceToTextParser(
     }
 
     override fun onError(p0: Int) {
-        if(p0 == SpeechRecognizer.ERROR_CLIENT){
+        if (p0 == SpeechRecognizer.ERROR_CLIENT) {
             return
         }
         _state.update {
@@ -118,14 +115,14 @@ class VoiceToTextParser(
         p0?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
             ?.getOrNull(0)
             ?.let { result ->
-            _state.update {
-                Log.d("VoiceToText", "onResults $result")
-                it.copy(
-                    spokenText = it.spokenText + result,
-                   // isSpeaking = false
-                )
+                _state.update {
+                    Log.d("VoiceToText", "onResults $result")
+                    it.copy(
+                        spokenText = it.spokenText + result,
+                        // isSpeaking = false
+                    )
+                }
             }
-        }
     }
 
     override fun onRmsChanged(p0: Float) = Unit

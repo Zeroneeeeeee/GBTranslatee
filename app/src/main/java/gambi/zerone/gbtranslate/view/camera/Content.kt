@@ -51,9 +51,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.gbtranslate.R
 import gambi.zerone.gbtranslate.utils.LanguageType
-import gambi.zerone.gbtranslate.utils.SharedPreference
 import gambi.zerone.gbtranslate.utils.toLanguageDisplayName
-import java.util.Locale
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -68,7 +66,7 @@ fun CameraScreen(
     onBack: () -> Unit,
     onExchange: () -> Unit = {},
 ) {
-    val scope = rememberCoroutineScope()
+    rememberCoroutineScope()
     val scaffoldState = rememberBottomSheetScaffoldState()
     val controller = remember {
         LifecycleCameraController(applicationContext).apply {
@@ -122,7 +120,7 @@ fun CameraScreen(
                     .fillMaxSize()
             )
 
-            Column() {
+            Column {
                 CameraHeader(
                     onBack = onBack,
                     modifier = Modifier.background(
@@ -239,7 +237,7 @@ fun LanguagePicker(
     toTranslateScreen: (LanguageType) -> Unit = {},
     onExchange: () -> Unit = {}
 ) {
-    val context = LocalContext.current
+    LocalContext.current
     Row(
         modifier = modifier
             .padding(16.dp)

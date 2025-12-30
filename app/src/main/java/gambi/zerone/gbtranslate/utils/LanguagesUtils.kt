@@ -15,7 +15,11 @@ object LanguagesUtils {
 
     fun getAllLanguagesCode(): List<String> = TranslateLanguage.getAllLanguages()
 
-    fun downloadLanguageModel(languageCode: String, onSuccess: () -> Unit = {}, onFailure: (Exception) -> Unit = {}) {
+    fun downloadLanguageModel(
+        languageCode: String,
+        onSuccess: () -> Unit = {},
+        onFailure: (Exception) -> Unit = {}
+    ) {
         val modelManager = RemoteModelManager.getInstance()
         val model = TranslateRemoteModel.Builder(languageCode).build()
         val conditions = DownloadConditions.Builder()
@@ -33,7 +37,12 @@ object LanguagesUtils {
             }
     }
 
-    fun translationInit(text: String,inputLanguage: String, outputLanguage: String, onSuccess: String.() -> Unit){
+    fun translationInit(
+        text: String,
+        inputLanguage: String,
+        outputLanguage: String,
+        onSuccess: String.() -> Unit
+    ) {
         IS_LOADING.value = true
         val option = TranslatorOptions.Builder()
             .setSourceLanguage(inputLanguage)
@@ -55,7 +64,7 @@ object LanguagesUtils {
         }
     }
 
-    fun Translator.translateLanguage(text: String, onSuccess: String.() -> Unit){
+    fun Translator.translateLanguage(text: String, onSuccess: String.() -> Unit) {
         translate(text).addOnSuccessListener {
             IS_LOADING.value = false
             onSuccess(it.orEmpty())

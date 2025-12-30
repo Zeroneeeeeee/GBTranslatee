@@ -51,7 +51,7 @@ fun Navigation(
     onChangeMode: (UiMode) -> Unit = {},
     language: String
 ) {
-    val backStack = rememberSaveable { mutableStateListOf<Screen>(Screen.LanguageSetting) }
+    val backStack = remember { mutableStateListOf<Screen>(Screen.LanguageSetting) }
     var inputLanguage by remember { mutableStateOf(TranslateLanguage.ENGLISH) }
     var outputLanguage by remember { mutableStateOf(TranslateLanguage.VIETNAMESE) }
 

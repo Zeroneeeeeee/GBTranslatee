@@ -7,7 +7,7 @@ import gambi.zerone.gbtranslate.repository.TranslateHistoryRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class TranslateHistoryImpl(context: Context): TranslateHistoryRepository {
+class TranslateHistoryImpl(context: Context) : TranslateHistoryRepository {
     val translateHistoryDao = AppDB.getInstance(context).translateHistoryDao()
     override suspend fun getAllHistories(): List<TranslateHistory> {
         return withContext(Dispatchers.IO) {

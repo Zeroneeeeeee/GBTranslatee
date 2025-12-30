@@ -10,8 +10,10 @@ import gambi.zerone.gbtranslate.entity.Lesson
 interface LessonDao {
     @Query("SELECT * FROM lesson")
     suspend fun getAllLessons(): List<Lesson>
+
     @Upsert
     suspend fun upsertLesson(lesson: Lesson)
+
     @Delete
     suspend fun deleteLesson(lesson: Lesson)
 }

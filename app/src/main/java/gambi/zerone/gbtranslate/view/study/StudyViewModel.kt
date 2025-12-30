@@ -2,14 +2,12 @@ package gambi.zerone.gbtranslate.view.study
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import gambi.zerone.gbtranslate.repository.impl.FlashCardImpl
 import gambi.zerone.gbtranslate.repository.impl.LessonImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class StudyViewModel(application: Application) : AndroidViewModel(application) {
@@ -55,7 +53,7 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun upsertFlashCard(flashCardVM: FlashCardVM, lessonId: Long){
+    fun upsertFlashCard(flashCardVM: FlashCardVM, lessonId: Long) {
         viewModelScope.launch(Dispatchers.IO) {
             val flashCardEntity = flashCardVM.toFlashCard(lessonId)
             flashCardRepo.upsertFlashCard(flashCardEntity)

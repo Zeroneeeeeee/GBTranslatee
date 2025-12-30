@@ -3,8 +3,6 @@ package gambi.zerone.gbtranslate.view.texttranslator
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.mlkit.nl.translate.Translator
-import gambi.zerone.gbtranslate.utils.LanguagesUtils
 import gambi.zerone.gbtranslate.entity.TranslateHistory
 import gambi.zerone.gbtranslate.repository.impl.TranslateHistoryImpl
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "translate_history")
 data class TranslateHistory(
-    @PrimaryKey val id: Long= System.currentTimeMillis(),
+    @PrimaryKey val id: Long = System.currentTimeMillis(),
     val inputLanguage: String,
     val outputLanguage: String,
     val inputText: String,

@@ -31,12 +31,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.gbtranslate.R
-import gambi.zerone.gbtranslate.utils.LanguagesUtils
 import gambi.zerone.gbtranslate.utils.SharedPreference
 import gambi.zerone.gbtranslate.view.conversation.Header
 
@@ -84,7 +82,7 @@ fun LanguageScreen(
             Icon(
                 painter = painterResource(R.drawable.ic_check),
                 contentDescription = "Check",
-                tint = if(enable) MaterialTheme.colorScheme.primary else Color.Gray,
+                tint = if (enable) MaterialTheme.colorScheme.primary else Color.Gray,
                 modifier = Modifier.clickable(
                     enabled = enable,
                     onClick = {

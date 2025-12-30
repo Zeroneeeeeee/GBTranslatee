@@ -7,7 +7,7 @@ import gambi.zerone.gbtranslate.repository.LessonRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class LessonImpl(context: Context): LessonRepository {
+class LessonImpl(context: Context) : LessonRepository {
     val lessonDao = AppDB.getInstance(context).lessonDao()
     override suspend fun getAllLessons(): List<Lesson> {
         return withContext(Dispatchers.IO) {

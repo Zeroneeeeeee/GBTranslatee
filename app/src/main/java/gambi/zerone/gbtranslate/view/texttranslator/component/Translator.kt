@@ -45,11 +45,9 @@ import com.example.gbtranslate.R
 import gambi.zerone.gbtranslate.entity.TranslateHistory
 import gambi.zerone.gbtranslate.utils.LanguageType
 import gambi.zerone.gbtranslate.utils.LanguagesUtils
-import gambi.zerone.gbtranslate.utils.SharedPreference
 import gambi.zerone.gbtranslate.utils.textToSpeech
 import gambi.zerone.gbtranslate.utils.toLanguageDisplayName
 import gambi.zerone.gbtranslate.view.texttranslator.TextTranslatorViewModel
-import java.util.Locale
 
 @Composable
 fun Translator(
@@ -97,7 +95,7 @@ fun Translator(
             outputLanguage = outputLanguage,
             input = text,
             output = outputText,
-            getText = {input, output ->
+            getText = { input, output ->
                 text = input
                 outputText = output
             },
@@ -141,7 +139,7 @@ fun LanguagePicker(
     language: String = "English",
     onClick: () -> Unit = {}
 ) {
-    val context = LocalContext.current
+    LocalContext.current
     Row(
         modifier = modifier
             .background(MaterialTheme.colorScheme.secondaryContainer, RoundedCornerShape(20.dp))
@@ -199,7 +197,6 @@ fun TranslateTextField(
     val outputTTS = remember { mutableStateOf<TextToSpeech?>(null) }
     var inputText by remember { mutableStateOf(input) }
     var outputText by remember { mutableStateOf(output) }
-    var isUserInput by remember { mutableStateOf(false) }
     val clipboard = LocalClipboardManager.current
     var isLoading by remember { mutableStateOf(false) }
 
@@ -319,7 +316,7 @@ fun TranslateTextField(
         InputField(
             modifier = Modifier.background(MaterialTheme.colorScheme.primaryContainer),
             canType = false,
-            text = if(isLoading) "Translating..." else outputText,
+            text = if (isLoading) "Translating..." else outputText,
             speakerClick = {
                 textToSpeech(outputTTS, context, outputLanguage, outputText)
             },

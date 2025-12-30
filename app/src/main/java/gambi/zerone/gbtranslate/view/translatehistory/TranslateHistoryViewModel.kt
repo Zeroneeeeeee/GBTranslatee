@@ -24,7 +24,7 @@ class TranslateHistoryViewModel(application: Application) : AndroidViewModel(app
         }
     }
 
-    fun fetchTimestamps(){
+    fun fetchTimestamps() {
         viewModelScope.launch {
             _timestamps.value = translateHistoryRepo.getTimestamps()
         }

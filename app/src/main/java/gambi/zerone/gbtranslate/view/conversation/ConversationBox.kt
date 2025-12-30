@@ -150,7 +150,7 @@ fun ConversationChat(
                 text = text,
                 inputLanguage = inputLanguage,
                 outputLanguage = outputLanguage,
-                onSuccess = {translatedText = this}
+                onSuccess = { translatedText = this }
             )
         }
     }
@@ -175,7 +175,7 @@ fun ConversationChat(
                 modifier = Modifier
                     .background(Color.White, RoundedCornerShape(12.dp))
                     .padding(16.dp)
-                    .align(if(sender == 1) Alignment.TopEnd else Alignment.TopStart),
+                    .align(if (sender == 1) Alignment.TopEnd else Alignment.TopStart),
             )
         }
 

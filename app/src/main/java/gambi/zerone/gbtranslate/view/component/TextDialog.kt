@@ -37,12 +37,12 @@ fun CupertinoAlertDialog(
     confirmText: String = "OK",
     cancelText: String = "Cancel",
     onConfirm: () -> Unit = {},
-    onCancel: () -> Unit={},
+    onCancel: () -> Unit = {},
 ) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .clickable{}
+            .clickable {}
             .background(Color.Gray.copy(alpha = 0.6f)),
         contentAlignment = Alignment.Center
     ) {
@@ -100,7 +100,7 @@ fun CupertinoAlertDialog(
                     TextButton(
                         onClick = onConfirm,
                         modifier = Modifier.weight(1f)
-                    ){
+                    ) {
                         Text(
                             text = confirmText,
                             color = Color(0xFF007AFF),

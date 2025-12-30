@@ -65,7 +65,7 @@ fun TranslateHistoryScreen(
         viewModel.fetchTimestamps()
     }
 
-    Box() {
+    Box {
         Column(
             modifier = modifier
                 .fillMaxSize()
