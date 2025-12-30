@@ -45,11 +45,12 @@ import gambi.zerone.gbtranslate.view.home.HomeViewModel
 fun Translator(
     modifier: Modifier = Modifier,
     toChoosingLanguage: (LanguageType) -> Unit,
-    toTextTranslate: (String, String) -> Unit,
+    toTextTranslate: () -> Unit,
     inputLanguage: String,
     outputLanguage: String,
     inputText: String,
     localizedContext: Context,
+    getInputText: (String) -> Unit,
     onVoiceToText: () -> Unit,
     onExchange: () -> Unit,
     toCameraScreen: () -> Unit,
@@ -65,7 +66,8 @@ fun Translator(
         Spacer(modifier = Modifier.height(16.dp))
         TranslateTextField(
             toTextTranslate = {
-                toTextTranslate(it, "")
+                getInputText(it)
+                toTextTranslate()
 //                LanguagesUtils.translationInit(
 //                    text = it,
 //                    inputLanguage = inputLanguage,

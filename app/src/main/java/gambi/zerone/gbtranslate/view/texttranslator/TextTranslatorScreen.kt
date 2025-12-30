@@ -38,10 +38,13 @@ fun TextTranslatorScreen(
     localizedContext: Context,
     input: String,
     output: String,
+    isSaveHistory: Boolean,
     inputLanguage: String,
     outputLanguage: String,
     application: Application,
     toChoosingLanguage: (LanguageType) -> Unit,
+    //getInputText: (String) -> Unit,
+    getText: (String, String) -> Unit,
     onExchange: () -> Unit,
     toHistoryScreen: () -> Unit,
     toCameraScreen: () -> Unit,
@@ -100,6 +103,7 @@ fun TextTranslatorScreen(
         localizedContext = localizedContext,
         input = inputText,
         output = output,
+        isSaveHistory = isSaveHistory,
         inputLanguage = inputLanguage,
         outputLanguage = outputLanguage,
         toChoosingLanguage = toChoosingLanguage,
@@ -111,6 +115,8 @@ fun TextTranslatorScreen(
             handleCameraClick()
         },
         toHistoryScreen = toHistoryScreen,
+        //getInputText = getInputText,
+        getText = getText,
         onBack = onBack
     )
     if (showMicPermissionDialog) {
@@ -163,11 +169,14 @@ private fun Content(
     output: String,
     inputLanguage: String,
     outputLanguage: String,
+    isSaveHistory: Boolean,
     toChoosingLanguage: (LanguageType) -> Unit,
     onExchange: () -> Unit,
     onVoiceToText: () -> Unit,
     onCamera: () -> Unit,
     toHistoryScreen: () -> Unit,
+    //getInputText: (String) -> Unit,
+    getText:(String,String) -> Unit,
     onBack: () -> Unit
 ) {
     LaunchedEffect(Unit) {
@@ -194,10 +203,13 @@ private fun Content(
             outputLanguage = outputLanguage,
             input = input,
             output = output,
+            isSaveHistory = isSaveHistory,
             toChoosingLanguage = toChoosingLanguage,
             onExchange = onExchange,
             onVoiceToText = onVoiceToText,
             onCamera = onCamera,
+            //getInputText = getInputText,
+            getText = getText,
             modifier = Modifier.padding(16.dp)
         )
     }

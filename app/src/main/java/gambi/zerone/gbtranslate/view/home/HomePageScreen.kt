@@ -64,7 +64,7 @@ import gambi.zerone.gbtranslate.view.home.component.Translator
 fun HomeScreen(
     modifier: Modifier = Modifier,
     toLanguageScreen: (LanguageType) -> Unit = {},
-    toTextTranslate: (String, String) -> Unit,
+    toTextTranslate: () -> Unit,
     inputLanguage: String,
     outputLanguage: String,
     application: Application,
@@ -74,6 +74,7 @@ fun HomeScreen(
     toConversationScreen: () -> Unit,
     toSettingScreen: () -> Unit,
     toStudyScreen: () -> Unit = {},
+    getInputText:(String) -> Unit,
     toHistoryScreen: () -> Unit = {}
 ) {
     val context = LocalContext.current
@@ -138,6 +139,7 @@ fun HomeScreen(
         outputLanguage = outputLanguage,
         onExchange = onExchange,
         localizedContext = localizedContext,
+        getInputText = getInputText,
         onVoiceToText = {
             handleVoiceClick()
         },
@@ -202,11 +204,12 @@ fun HomeScreen(
 private fun Content(
     modifier: Modifier = Modifier,
     toChoosingLanguage: (LanguageType) -> Unit = {},
-    toTextTranslate: (String, String) -> Unit,
+    toTextTranslate: () -> Unit,
     inputLanguage: String,
     outputLanguage: String,
     inputText: String,
     localizedContext: Context,
+    getInputText:(String) -> Unit,
     onExchange: () -> Unit,
     onVoiceToText: () -> Unit,
     toCameraScreen: () -> Unit,
@@ -229,6 +232,7 @@ private fun Content(
             outputLanguage = outputLanguage,
             onExchange = onExchange,
             onVoiceToText = onVoiceToText,
+            getInputText = getInputText,
             toCameraScreen = toCameraScreen,
             localizedContext = localizedContext
 

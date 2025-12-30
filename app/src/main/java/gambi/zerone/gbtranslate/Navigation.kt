@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -55,6 +56,14 @@ fun Navigation(
     var inputLanguage by remember { mutableStateOf(TranslateLanguage.ENGLISH) }
     var outputLanguage by remember { mutableStateOf(TranslateLanguage.VIETNAMESE) }
 
+    var inputText by remember { mutableStateOf("") }
+    var outputText by remember { mutableStateOf("") }
+    var isSaveHistory by remember { mutableStateOf(false) }
+
+    LaunchedEffect(inputText) {
+        Log.d("TranslateTextField1", "Input text: $inputText")
+    }
+
     if (SharedPreference.getUiMode(application.applicationContext) == UiMode.DARK) {
         Image(
             painter = painterResource(R.drawable.background),
@@ -80,8 +89,12 @@ fun Navigation(
                     toLanguageScreen = { type ->
                         backStack.add(Screen.Language(type))
                     },
-                    toTextTranslate = { input, output ->
-                        backStack.add(Screen.TextTranslate(input, output))
+                    getInputText = {
+                        inputText = it
+                    },
+                    toTextTranslate = {
+                        isSaveHistory = true
+                        backStack.add(Screen.TextTranslate)
                     },
                     onExchange = {
                         val temp = inputLanguage
@@ -121,14 +134,15 @@ fun Navigation(
                     }
                 )
             }
-            entry<Screen.TextTranslate> { (input, output) ->
+            entry<Screen.TextTranslate> {
                 TextTranslatorScreen(
                     localizedContext = localizedContext,
-                    input = input,
-                    output = output,
+                    input = inputText,
+                    output = outputText,
                     inputLanguage = inputLanguage,
                     outputLanguage = outputLanguage,
                     application = application,
+                    isSaveHistory = isSaveHistory,
                     toChoosingLanguage = { type ->
                         backStack.add(Screen.Language(type))
                     },
@@ -143,6 +157,14 @@ fun Navigation(
                     },
                     toCameraScreen = {
                         backStack.add(Screen.Camera)
+                    },
+//                    getInputText = {
+//                        Log.d("TranslateTextField1", "Nav text: $it")
+//                        inputText = it
+//                    },
+                    getText = { input, output ->
+                        inputText = input
+                        outputText = output
                     },
                     onBack = {
                         backStack.removeLastOrNull()
@@ -267,9 +289,13 @@ fun Navigation(
                         inputLanguage = history.inputLanguage
                         outputLanguage = history.outputLanguage
                         backStack.removeLastOrNull()
-                        backStack.add(Screen.TextTranslate(history.inputText))
+                        isSaveHistory = false
+                        inputText = history.inputText
+                        outputText = history.outputText
+                        backStack.add(Screen.TextTranslate)
                     },
                     onBack = {
+                        isSaveHistory = false
                         backStack.removeLastOrNull()
                     }
                 )

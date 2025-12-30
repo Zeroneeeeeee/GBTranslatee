@@ -56,16 +56,20 @@ fun Translator(
     toChoosingLanguage: (LanguageType) -> Unit,
     inputLanguage: String,
     outputLanguage: String,
+    isSaveHistory: Boolean,
     input: String,
     output: String,
     onExchange: () -> Unit,
     onVoiceToText: () -> Unit,
-    onCamera: () -> Unit
+    onCamera: () -> Unit,
+    getText: (String, String) -> Unit,
+    //getInputText: (String) -> Unit,
 ) {
     var text by remember { mutableStateOf(input) }
     var outputText by remember { mutableStateOf(output) }
-    LaunchedEffect(Unit) {
-        Log.d("TranslateTextField1", "output: $output")
+    LaunchedEffect(text) {
+        Log.d("TranslateTextField1", "text: $text")
+        //getInputText(text)
     }
 //    LaunchedEffect(input) {
 //        text = input
@@ -81,11 +85,12 @@ fun Translator(
             outputLanguage = outputLanguage,
             onExchange = {
                 onExchange()
-                val temp = text
-                text = outputText
-                outputText = temp
-                Log.d("TranslateTextField1", "output: $output")
-                Log.d("TranslateTextField1", "text: $text")
+                if(outputText.isNotEmpty()){
+                    val temp = text
+                    text = outputText
+                    outputText = temp
+                }
+                getText(text, outputText)
             }
         )
         Spacer(modifier = Modifier.height(16.dp))
@@ -93,6 +98,7 @@ fun Translator(
             localizedContext = localizedContext,
             inputLanguage = inputLanguage,
             outputLanguage = outputLanguage,
+            isSaveHistory = isSaveHistory,
             input = text,
             output = outputText,
             getText = { input, output ->
@@ -186,6 +192,7 @@ fun TranslateTextField(
     outputLanguage: String,
     input: String,
     output: String,
+    isSaveHistory: Boolean,
     localizedContext: Context,
     getText: (String, String) -> Unit,
     onVoiceToText: () -> Unit,
@@ -204,24 +211,31 @@ fun TranslateTextField(
         Log.d("TranslateTextField2", "output: $output")
         Log.d("Input", "input: $input")
         isLoading = true
-        LanguagesUtils.translationInit(
-            text = input,
-            inputLanguage = inputLanguage,
-            outputLanguage = outputLanguage,
-            onSuccess = {
-                outputText = this
-                getText(inputText, outputText)
-                viewModel.insertHistory(
-                    TranslateHistory(
-                        inputText = input,
-                        outputText = this,
-                        inputLanguage = inputLanguage,
-                        outputLanguage = outputLanguage
-                    )
-                )
-                isLoading = false
-            }
-        )
+        if(output.isEmpty()){
+            LanguagesUtils.translationInit(
+                text = input,
+                inputLanguage = inputLanguage,
+                outputLanguage = outputLanguage,
+                onSuccess = {
+                    outputText = this
+                    getText(inputText, outputText)
+                    if (isSaveHistory) {
+                        viewModel.insertHistory(
+                            TranslateHistory(
+                                inputText = input,
+                                outputText = this,
+                                inputLanguage = inputLanguage,
+                                outputLanguage = outputLanguage
+                            )
+                        )
+                    }
+                    isLoading = false
+                }
+            )
+        } else{
+            outputText = output
+            isLoading = false
+        }
     }
 
     LaunchedEffect(input) {
@@ -246,6 +260,7 @@ fun TranslateTextField(
             onTextChange = {
                 outputText = ""
                 inputText = it
+                getText(inputText, outputText)
             },
             localizedContext = localizedContext,
         ) {

@@ -9,7 +9,7 @@ import gambi.zerone.gbtranslate.view.study.LessonVM
 interface Screen {
     data object Home : Screen
     data class Language(var type: LanguageType) : Screen
-    data class TextTranslate(var input: String = "", var output: String = "") : Screen
+    data object TextTranslate : Screen
     data object Conversation : Screen
     data object Camera : Screen
     data class ImageTranslate(var bitmap: Bitmap) : Screen
