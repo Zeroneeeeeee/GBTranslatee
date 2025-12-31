@@ -28,6 +28,7 @@
     <string name="complete">Hoàn thành</string>
     <string name="unknown">Chưa thuộc: %1$d</string>
     <string name="known">Đã thuộc: %1$d</string>
+    <string name="known1">Đã thuộc</string>
     <string name="your_list">Bài học của bạn</string>
     <string name="new_list">Bài học mới</string>
     <string name="collections">Bài mẫu</string>

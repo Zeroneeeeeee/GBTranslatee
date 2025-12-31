@@ -86,4 +86,5 @@
     <string name="restart_practice">Restart practice</string>
     <string name="practice_cards">Practice %1$d cards</string>
     <string name="learned">Learned</string>
+    <string name="known1">Known</string>
 </resources>

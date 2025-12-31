@@ -28,6 +28,7 @@
     <string name="complete">完了！</string>
     <string name="unknown">不明: %1$d</string>
     <string name="known">既知: %1$d</string>
+    <string name="known1">既知</string>
     <string name="your_list">あなたのリスト</string>
     <string name="new_list">新しいリスト</string>
     <string name="collections">コレクション</string>

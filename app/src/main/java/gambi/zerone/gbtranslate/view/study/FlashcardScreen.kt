@@ -167,7 +167,7 @@ fun FlashcardScreen(
 
                 SwipeRevealAction(
                     progress = rightProgress,
-                    text = localizedContext.resources.getString(R.string.known),
+                    text = localizedContext.resources.getString(R.string.known1),
                     icon = R.drawable.ic_studied,
                     background = Color(0xFF3162FF),
                     alignStart = false,
@@ -496,7 +496,7 @@ private fun SwipeRevealAction(
     alignStart: Boolean
 ) {
     val minWidth = 44.dp
-    val maxWidth = 120.dp
+    val maxWidth = 150.dp
     val width = lerp(minWidth, maxWidth, progress)
 
     Row(

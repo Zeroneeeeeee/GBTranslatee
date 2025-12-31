@@ -28,6 +28,7 @@
     <string name="complete">Terminé !</string>
     <string name="unknown">Inconnus : %1$d</string>
     <string name="known">Connus : %1$d</string>
+    <string name="known1">Connus</string>
     <string name="your_list">Votre liste</string>
     <string name="new_list">Nouvelle liste</string>
     <string name="collections">Collections</string>

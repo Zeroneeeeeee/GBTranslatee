@@ -28,6 +28,7 @@
     <string name="complete">Concluído!</string>
     <string name="unknown">Desconhecidas: %1$d</string>
     <string name="known">Conhecidas: %1$d</string>
+    <string name="known1">Conhecidas</string>
     <string name="your_list">A sua lista</string>
     <string name="new_list">Nova lista</string>
     <string name="collections">Coleções</string>

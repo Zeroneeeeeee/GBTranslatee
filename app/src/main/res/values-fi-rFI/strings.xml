@@ -28,6 +28,7 @@
     <string name="complete">Valmis!</string>
     <string name="unknown">Tuntemattomat: %1$d</string>
     <string name="known">Tunnetut: %1$d</string>
+    <string name="known1">Tunnetut</string>
     <string name="your_list">Oma lista</string>
     <string name="new_list">Uusi lista</string>
     <string name="collections">Kokoelmat</string>
