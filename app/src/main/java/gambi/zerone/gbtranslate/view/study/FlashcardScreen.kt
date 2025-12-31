@@ -7,13 +7,8 @@ package gambi.zerone.gbtranslate.view.study
 
 import android.content.Context
 import android.speech.tts.TextToSpeech
-import androidx.compose.animation.core.FastOutSlowInEasing
-import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
@@ -37,6 +32,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -59,15 +55,12 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.lerp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.util.lerp
 import com.example.gbtranslate.R
 import com.google.mlkit.nl.translate.TranslateLanguage
 import gambi.zerone.gbtranslate.utils.textToSpeech
@@ -417,11 +410,7 @@ private fun FlashCardItem(
                     }
                 } else Modifier
             )
-            .pointerInput(isTop) {
-                if (isTop) {
-                    detectTapGestures { flipped = !flipped }
-                }
-            }
+
     ) {
         if (isTop && overlayAlpha > 0f) {
             Box(
@@ -469,6 +458,28 @@ private fun FlashCardItem(
                 modifier = Modifier
                     .align(Alignment.Center)
                     .graphicsLayer { rotationY = 180f }
+            )
+        }
+
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.BottomCenter)
+                .clickable {
+                    if (isTop) {
+                        flipped = !flipped
+                    }
+                }
+        ) {
+            HorizontalDivider()
+            Text(
+                text = "Flip card",
+                fontWeight = FontWeight.SemiBold,
+                modifier = Modifier
+                    .padding(16.dp)
+                    .graphicsLayer { rotationY = if (flipRotation <= 90) 0f else 180f }
+                    .align(Alignment.CenterHorizontally)
+
             )
         }
 
