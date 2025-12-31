@@ -256,7 +256,7 @@ fun TranslateTextField(
                     )
 
                 ) {
-                    Text(text = "Translate")
+                    Text(text = localizedContext.resources.getString(R.string.translate))
                 }
             }
         }

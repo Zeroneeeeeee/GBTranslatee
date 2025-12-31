@@ -86,10 +86,26 @@
     <string name="flashcards_help_you_remember_new_words_longer_with_images_and_examples">
     フラッシュカードは、画像や例とともに新しい単語を長く覚えるのに役立ちます。
 </string>
-    <string name="no_text_detected">No text detected</string>
-    <string name="use_two_fingers_to_zoom_and_move_the_image">Use two fingers to zoom and move the image</string>
-    <string name="drag_your_finger_to_select_an_area">Drag your finger to select an area</string>
-    <string name="clip">Clip</string>
-    <string name="zoom">Zoom</string>
+    <string name="no_text_detected">テキストが検出されませんでした</string>
+    <string name="use_two_fingers_to_zoom_and_move_the_image">
+    2本の指で画像をズームおよび移動します
+</string>
+    <string name="drag_your_finger_to_select_an_area">
+    指でドラッグして範囲を選択します
+</string>
+    <string name="clip">切り取り</string>
+    <string name="zoom">ズーム</string>
+
+    <string name="scan_and_translate">スキャンして翻訳</string>
+    <string name="speak_to_translate">話して翻訳</string>
+    <string name="live_chat_translate">ライブチャット翻訳</string>
+    <string name="learn_review"><![CDATA[学習と復習]]></string>
+    <string name="translating">翻訳中…</string>
+    <string name="learn">学習</string>
+    <string name="practice_again">もう一度練習</string>
+    <string name="restart_practice">練習を最初からやり直す</string>
+    <string name="practice_cards">%1$d枚のカードを練習</string>
+    <string name="learned">学習済み</string>
+
 
 </resources>

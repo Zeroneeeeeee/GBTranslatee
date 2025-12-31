@@ -333,7 +333,7 @@ fun ImageTranslateScreen(
                                 ).show()
                             }
                         ) {
-                            Row {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
                                 Icon(
                                     painter = painterResource(if (imageMode == ImageMode.ZOOM) R.drawable.ic_zoom else R.drawable.ic_crop),
                                     contentDescription = "Image mode",

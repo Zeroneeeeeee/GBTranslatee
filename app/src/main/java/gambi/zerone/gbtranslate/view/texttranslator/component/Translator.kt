@@ -35,6 +35,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -331,7 +332,7 @@ fun TranslateTextField(
         InputField(
             modifier = Modifier.background(MaterialTheme.colorScheme.primaryContainer),
             canType = false,
-            text = if (isLoading) "Translating..." else outputText,
+            text = if (isLoading) localizedContext.resources.getString(R.string.translating) else outputText,
             speakerClick = {
                 textToSpeech(outputTTS, context, outputLanguage, outputText)
             },

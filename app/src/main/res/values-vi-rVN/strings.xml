@@ -72,9 +72,19 @@
     <string name="break_language_barriers_communicate_with_confidence_anytime_anywhere">Xóa bỏ rào cản ngôn ngữ. Giao tiếp tự tin mọi lúc, mọi nơi.</string>
     <string name="boost_vocabulary_with_flashcards">Mở rộng từ vựng với Flashcard</string>
     <string name="flashcards_help_you_remember_new_words_longer_with_images_and_examples">Flashcard giúp bạn nhớ từ mới lâu hơn với hình ảnh và ví dụ minh họa.</string>
-    <string name="use_two_fingers_to_zoom_and_move_the_image">Use two fingers to zoom and move the image</string>
-    <string name="drag_your_finger_to_select_an_area">Drag your finger to select an area</string>
-    <string name="no_text_detected">No text detected</string>
-    <string name="clip">Clip</string>
-    <string name="zoom">Zoom</string>
+    <string name="use_two_fingers_to_zoom_and_move_the_image">Kéo 2 ngón để thay đổi kích cỡ</string>
+    <string name="drag_your_finger_to_select_an_area">Vuốt ngón tay để chọn vùng để dịch</string>
+    <string name="no_text_detected">Không phát hiện văn bản</string>
+    <string name="clip">Quét</string>
+    <string name="zoom">Chỉnh</string>
+    <string name="scan_and_translate">Quét và dịch</string>
+    <string name="speak_to_translate">Nói để dịch</string>
+    <string name="live_chat_translate">Dịch hội thoại trực tiếp</string>
+    <string name="learn_review"><![CDATA[Học & ôn tập]]></string>
+    <string name="translating">Đang dịch...</string>
+    <string name="learn">Học tập</string>
+    <string name="practice_again">Chưa nhớ</string>
+    <string name="restart_practice">Học lại</string>
+    <string name="practice_cards">Học %1$d thẻ</string>
+    <string name="learned">Đã nhớ</string>
 </resources>

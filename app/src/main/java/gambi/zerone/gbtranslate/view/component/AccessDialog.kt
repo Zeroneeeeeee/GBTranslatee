@@ -27,6 +27,7 @@ fun VoiceAccessDialog(
     localizedContext: Context
 ) {
     PermissionDialog(
+        localizedContext = localizedContext,
         permission = Manifest.permission.RECORD_AUDIO,
         iconRes = R.drawable.ic_mic_outline,
         title = localizedContext.getString(R.string.voice_access),
@@ -44,6 +45,7 @@ fun CameraAccessDialog(
     localizedContext: Context
 ) {
     PermissionDialog(
+        localizedContext = localizedContext,
         permission = Manifest.permission.CAMERA,
         iconRes = R.drawable.ic_camera,
         title = localizedContext.getString(R.string.camera_access),
@@ -56,6 +58,7 @@ fun CameraAccessDialog(
 
 @Composable
 fun PermissionDialog(
+    localizedContext: Context,
     permission: String,
     iconRes: Int,
     title: String,
@@ -101,8 +104,8 @@ fun PermissionDialog(
         icon = iconRes,
         title = title,
         description = description,
-        confirmText = context.getString(R.string.turn_on),
-        cancelText = context.getString(R.string.maybe_later),
+        confirmText = localizedContext.resources.getString(R.string.turn_on),
+        cancelText = localizedContext.resources.getString(R.string.maybe_later),
         onConfirm = {
             when {
                 ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED -> {
@@ -121,16 +124,6 @@ fun PermissionDialog(
         onDismiss = onDismiss,
         modifier = modifier
     )
-}
-
-
-fun openAppSettings(context: Context) {
-    val intent = Intent(
-        Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-        Uri.fromParts("package", context.packageName, null)
-    )
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(intent)
 }
 
 private const val PREF_NAME = "permission_prefs"

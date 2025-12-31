@@ -59,6 +59,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
@@ -85,7 +86,7 @@ fun FlashcardScreen(
     var unknownCount by remember { mutableIntStateOf(0) }
     var cardList by remember { mutableStateOf(cards) }
 
-    val unknownCards = remember{mutableStateListOf<FlashCardVM>()}
+    val unknownCards = remember { mutableStateListOf<FlashCardVM>() }
 
     var dragX by remember { mutableFloatStateOf(0f) }
 
@@ -96,11 +97,13 @@ fun FlashcardScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
+
     ) {
         Header(title = localizedContext.resources.getString(R.string.flashcards), onBack = onBack)
 
         if (index >= cardList.size) {
             ResultScreen(
+                localizedContext = localizedContext,
                 progress = "${knownCount / cardList.size.toFloat() * 100}%",
                 currentProgress = knownCount / cardList.size.toFloat(),
                 known = knownCount,
@@ -151,7 +154,7 @@ fun FlashcardScreen(
                             onSwipedRight = {
                                 knownCount++
                                 index++
-                            }
+                            },
                         )
                     }
                 }
@@ -162,7 +165,7 @@ fun FlashcardScreen(
             ) {
                 SwipeRevealAction(
                     progress = leftProgress,
-                    text = "Learn",
+                    text = localizedContext.resources.getString(R.string.learn),
                     icon = R.drawable.ic_practice_again,
                     background = Color(0xFFFFC83D),
                     alignStart = true,
@@ -171,7 +174,7 @@ fun FlashcardScreen(
 
                 SwipeRevealAction(
                     progress = rightProgress,
-                    text = "Known",
+                    text = localizedContext.resources.getString(R.string.known),
                     icon = R.drawable.ic_studied,
                     background = Color(0xFF3162FF),
                     alignStart = false,
@@ -212,7 +215,6 @@ fun ProgressBar(
     }
 }
 
-@Preview(showBackground = true)
 @Composable
 fun ResultScreen(
     modifier: Modifier = Modifier,
@@ -222,7 +224,8 @@ fun ResultScreen(
     unknown: Int = 0,
     total: Int = 0,
     onRestart: () -> Unit = {},
-    onPracticeAgain: () -> Unit = {}
+    onPracticeAgain: () -> Unit = {},
+    localizedContext: Context
 ) {
     Column(modifier = modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
         Spacer(Modifier.height(40.dp))
@@ -240,7 +243,7 @@ fun ResultScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                "Learned",
+                text = localizedContext.resources.getString(R.string.learned),
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 16.sp,
                 color = MaterialTheme.colorScheme.onBackground
@@ -275,7 +278,7 @@ fun ResultScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                "Practice again",
+                text = localizedContext.resources.getString(R.string.practice_again),
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 16.sp,
                 color = MaterialTheme.colorScheme.onBackground
@@ -308,12 +311,12 @@ fun ResultScreen(
                 .fillMaxWidth()
         ) {
             Button(onClick = onRestart, modifier = Modifier.weight(1f)) {
-                Text("Restart practice")
+                Text(localizedContext.resources.getString(R.string.restart_practice))
             }
             if (unknown > 0) {
                 Spacer(Modifier.width(16.dp))
                 Button(onClick = onPracticeAgain, modifier = Modifier.weight(1f)) {
-                    Text("Practice $unknown cards")
+                    Text(localizedContext.resources.getString(R.string.practice_cards, unknown))
                 }
             }
         }
@@ -329,7 +332,7 @@ private fun FlashCardItem(
     offsetY: Dp,
     onSwipedLeft: () -> Unit,
     onSwipedRight: () -> Unit,
-    getCardState: (Boolean, Float) -> Unit
+    getCardState: (Boolean, Float) -> Unit,
 ) {
     var flipped by remember { mutableStateOf(false) }
     var dragX by remember { mutableFloatStateOf(0f) }
@@ -409,7 +412,7 @@ private fun FlashCardItem(
                                     dragX < -300 -> onSwipedLeft()
                                     else -> dragX = 0f
                                 }
-                            }
+                            },
                         )
                     }
                 } else Modifier
@@ -525,6 +528,3 @@ private fun SwipeRevealAction(
         }
     }
 }
-
-
-

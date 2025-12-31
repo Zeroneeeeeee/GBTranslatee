@@ -85,7 +85,7 @@ fun Content(
             FlashCardList(
                 cardList = lesson.items,
                 onClick = {
-                    toAddFlashCardScreen(lesson, it)
+                    if(type == LessonType.USER_DEFINED) { toAddFlashCardScreen(lesson, it) }
                 },
                 localizedContext = localizedContext,
                 modifier = Modifier

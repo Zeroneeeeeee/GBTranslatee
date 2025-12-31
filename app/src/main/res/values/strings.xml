@@ -76,4 +76,14 @@
     <string name="no_text_detected">No text detected</string>
     <string name="use_two_fingers_to_zoom_and_move_the_image">Use two fingers to zoom and move the image</string>
     <string name="drag_your_finger_to_select_an_area">Drag your finger to select an area</string>
+    <string name="scan_and_translate">Scan and Translate</string>
+    <string name="speak_to_translate">Speak to Translate</string>
+    <string name="live_chat_translate">Live Chat Translate</string>
+    <string name="learn_review"><![CDATA[Learn & Review]]></string>
+    <string name="translating">Translating...</string>
+    <string name="learn">Learn</string>
+    <string name="practice_again">Practice again</string>
+    <string name="restart_practice">Restart practice</string>
+    <string name="practice_cards">Practice %1$d cards</string>
+    <string name="learned">Learned</string>
 </resources>

@@ -39,7 +39,7 @@ import gambi.zerone.gbtranslate.view.conversation.Header
 fun StudyScreen(
     modifier: Modifier = Modifier,
     onItemClick: (LessonVM, LessonType) -> Unit = { _, _ -> },
-    lists: List<LessonVM> = listLessons,
+    onBack: () -> Unit = {},
     localizedContext: Context,
     viewModel: StudyViewModel = viewModel()
 ) {
@@ -56,7 +56,8 @@ fun StudyScreen(
         onItemClick = onItemClick,
         onAddNewList = {
             showAddDialog = true
-        }
+        },
+        onBack = onBack
     )
     if (showAddDialog) {
         AddLessonDialog(
@@ -82,13 +83,14 @@ private fun Content(
     localizedContext: Context,
     onItemClick: (LessonVM, LessonType) -> Unit,
     onAddNewList: () -> Unit = {},
+    onBack: () -> Unit = {}
 ) {
 
     Column(
         modifier = modifier
             .fillMaxSize(),
     ) {
-        Header(title = localizedContext.resources.getString(R.string.study), onBack = {})
+        Header(title = localizedContext.resources.getString(R.string.study), onBack = onBack)
         Lists(
             localizedContext = localizedContext,
             lists = list,

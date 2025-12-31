@@ -86,10 +86,27 @@
     <string name="flashcards_help_you_remember_new_words_longer_with_images_and_examples">
     Os flashcards ajudam você a memorizar novas palavras por mais tempo com imagens e exemplos.
 </string>
-    <string name="use_two_fingers_to_zoom_and_move_the_image">Use two fingers to zoom and move the image</string>
-    <string name="drag_your_finger_to_select_an_area">Drag your finger to select an area</string>
-    <string name="no_text_detected">No text detected</string>
-    <string name="clip">Clip</string>
+    <string name="use_two_fingers_to_zoom_and_move_the_image">
+    Use dois dedos para ampliar e mover a imagem
+</string>
+    <string name="drag_your_finger_to_select_an_area">
+    Arraste o dedo para selecionar uma área
+</string>
+    <string name="no_text_detected">Nenhum texto detetado</string>
+
+    <string name="clip">Recortar</string>
     <string name="zoom">Zoom</string>
 
+    <string name="scan_and_translate">Digitalizar e traduzir</string>
+    <string name="speak_to_translate">Falar para traduzir</string>
+    <string name="live_chat_translate">Tradução de conversa em tempo real</string>
+
+    <string name="learn_review"><![CDATA[Aprender e rever]]></string>
+    <string name="translating">A traduzir...</string>
+
+    <string name="learn">Aprender</string>
+    <string name="practice_again">Praticar novamente</string>
+    <string name="restart_practice">Reiniciar prática</string>
+    <string name="practice_cards">Praticar %1$d cartões</string>
+    <string name="learned">Aprendido</string>
 </resources>

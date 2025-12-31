@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -76,7 +77,7 @@ fun ModeList(
             ModeItem(
                 title = localizedContext.resources.getString(R.string.camera_image),
                 icon = R.drawable.ic_camera_stylist,
-                description = "Scan and Translate",
+                description = localizedContext.resources.getString(R.string.scan_and_translate),
                 onClick = { toCameraScreen() },
                 modifier = Modifier.weight(1f)
             )
@@ -84,7 +85,7 @@ fun ModeList(
             ModeItem(
                 title = localizedContext.resources.getString(R.string.voice),
                 icon = R.drawable.ic_voice_stylist,
-                description = "Speak to Translate",
+                description = localizedContext.resources.getString(R.string.speak_to_translate),
                 onClick = { showVoiceDialog() },
                 modifier = Modifier.weight(1f)
             )
@@ -95,7 +96,7 @@ fun ModeList(
             ModeItem(
                 title = localizedContext.resources.getString(R.string.conversation),
                 icon = R.drawable.ic_conversation_stylist,
-                description = "Live Chat Translate",
+                description = localizedContext.resources.getString(R.string.live_chat_translate),
                 onClick = toConversationScreen,
                 modifier = Modifier.weight(1f)
             )
@@ -103,7 +104,7 @@ fun ModeList(
             ModeItem(
                 title = localizedContext.resources.getString(R.string.study),
                 onClick = toStudyScreen,
-                description = "Learn & Review",
+                description = localizedContext.resources.getString(R.string.learn_review),
                 icon = R.drawable.ic_study_stylist,
                 modifier = Modifier.weight(1f)
             )

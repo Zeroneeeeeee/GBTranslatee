@@ -259,7 +259,9 @@ fun Navigation(
                     onItemClick = { lesson, type ->
                         backStack.add(Screen.FlashCardList(lesson, type))
                     },
-                    lists = lists
+                    onBack = {
+                        backStack.removeLastOrNull()
+                    }
                 )
             }
 

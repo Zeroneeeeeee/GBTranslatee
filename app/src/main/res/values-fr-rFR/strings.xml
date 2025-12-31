@@ -86,10 +86,26 @@
     <string name="flashcards_help_you_remember_new_words_longer_with_images_and_examples">
     Les cartes mémoire vous aident à mémoriser de nouveaux mots plus longtemps grâce aux images et aux exemples.
 </string>
-    <string name="no_text_detected">No text detected</string>
-    <string name="use_two_fingers_to_zoom_and_move_the_image">Use two fingers to zoom and move the image</string>
-    <string name="drag_your_finger_to_select_an_area">Drag your finger to select an area</string>
-    <string name="clip">Clip</string>
+    <string name="no_text_detected">Aucun texte détecté</string>
+    <string name="use_two_fingers_to_zoom_and_move_the_image">
+    Utilisez deux doigts pour zoomer et déplacer l’image
+</string>
+    <string name="drag_your_finger_to_select_an_area">
+    Faites glisser votre doigt pour sélectionner une zone
+</string>
+    <string name="clip">Découper</string>
     <string name="zoom">Zoom</string>
+
+    <string name="scan_and_translate">Scanner et traduire</string>
+    <string name="speak_to_translate">Parler pour traduire</string>
+    <string name="live_chat_translate">Traduction de chat en direct</string>
+    <string name="learn_review"><![CDATA[Apprendre et réviser]]></string>
+    <string name="translating">Traduction en cours…</string>
+    <string name="learn">Apprendre</string>
+    <string name="practice_again">S’exercer à nouveau</string>
+    <string name="restart_practice">Recommencer la pratique</string>
+    <string name="practice_cards">Pratiquer %1$d cartes</string>
+    <string name="learned">Appris</string>
+
 
 </resources>

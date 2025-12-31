@@ -86,10 +86,26 @@
     <string name="flashcards_help_you_remember_new_words_longer_with_images_and_examples">
     Las tarjetas didácticas te ayudan a recordar palabras nuevas por más tiempo con imágenes y ejemplos.
 </string>
-    <string name="no_text_detected">No text detected</string>
-    <string name="use_two_fingers_to_zoom_and_move_the_image">Use two fingers to zoom and move the image</string>
-    <string name="drag_your_finger_to_select_an_area">Drag your finger to select an area</string>
-    <string name="clip">Clip</string>
+    <string name="no_text_detected">No se detectó texto</string>
+    <string name="use_two_fingers_to_zoom_and_move_the_image">
+    Usa dos dedos para hacer zoom y mover la imagen
+</string>
+    <string name="drag_your_finger_to_select_an_area">
+    Arrastra el dedo para seleccionar un área
+</string>
+    <string name="clip">Recortar</string>
     <string name="zoom">Zoom</string>
+
+    <string name="scan_and_translate">Escanear y traducir</string>
+    <string name="speak_to_translate">Hablar para traducir</string>
+    <string name="live_chat_translate">Traducción de chat en vivo</string>
+    <string name="learn_review"><![CDATA[Aprender y repasar]]></string>
+    <string name="translating">Traduciendo…</string>
+    <string name="learn">Aprender</string>
+    <string name="practice_again">Practicar de nuevo</string>
+    <string name="restart_practice">Reiniciar práctica</string>
+    <string name="practice_cards">Practicar %1$d tarjetas</string>
+    <string name="learned">Aprendido</string>
+
 
 </resources>
